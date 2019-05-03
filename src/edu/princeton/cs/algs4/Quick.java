@@ -6,7 +6,7 @@
  *                https://algs4.cs.princeton.edu/23quicksort/words3.txt
  *
  *  Sorts a sequence of strings from standard input using quicksort.
- *
+ *   
  *  % more tiny.txt
  *  S O R T E X A M P L E
  *
@@ -15,7 +15,7 @@
  *
  *  % more words3.txt
  *  bed bug dad yes zoo ... all bad yet
- *
+ *       
  *  % java Quick < words3.txt
  *  all bad bed bug dad ... yes yet zoo    [ one string per line ]
  *
@@ -26,10 +26,7 @@
  *
  ******************************************************************************/
 
-
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
-import edu.princeton.cs.algs4.StdIn;
+package edu.princeton.cs.algs4;
 
 /**
  *  The {@code Quick} class provides static methods for sorting an
@@ -58,7 +55,7 @@ public class Quick {
     }
 
     // quicksort the subarray from a[lo] to a[hi]
-    private static void sort(Comparable[] a, int lo, int hi) {
+    private static void sort(Comparable[] a, int lo, int hi) { 
         if (hi <= lo) return;
         int j = partition(a, lo, hi);
         sort(a, lo, j-1);
@@ -72,7 +69,7 @@ public class Quick {
         int i = lo;
         int j = hi + 1;
         Comparable v = a[lo];
-        while (true) {
+        while (true) { 
 
             // find item on lo to swap
             while (less(a[++i], v)) {
@@ -124,16 +121,16 @@ public class Quick {
 
 
 
-    /***************************************************************************
-     *  Helper sorting functions.
-     ***************************************************************************/
-
+   /***************************************************************************
+    *  Helper sorting functions.
+    ***************************************************************************/
+    
     // is v < w ?
     private static boolean less(Comparable v, Comparable w) {
         if (v == w) return false;   // optimization when reference equals
         return v.compareTo(w) < 0;
     }
-
+        
     // exchange a[i] and a[j]
     private static void exch(Object[] a, int i, int j) {
         Object swap = a[i];
@@ -142,9 +139,9 @@ public class Quick {
     }
 
 
-    /***************************************************************************
-     *  Check if array is sorted - useful for debugging.
-     ***************************************************************************/
+   /***************************************************************************
+    *  Check if array is sorted - useful for debugging.
+    ***************************************************************************/
     private static boolean isSorted(Comparable[] a) {
         return isSorted(a, 0, a.length - 1);
     }
@@ -172,8 +169,7 @@ public class Quick {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-
-        Integer a[] = { 14, 12, 10, 8, 6, 4, 2, 0, 1, 3, 5, 7, 9, 11, 13 };
+        String[] a = StdIn.readAllStrings();
         Quick.sort(a);
         show(a);
         assert isSorted(a);
@@ -184,7 +180,7 @@ public class Quick {
         // display results again using select
         StdOut.println();
         for (int i = 0; i < a.length; i++) {
-            Integer ith = (Integer) Quick.select(a, i);
+            String ith = (String) Quick.select(a, i);
             StdOut.println(ith);
         }
     }

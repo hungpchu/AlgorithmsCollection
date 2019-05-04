@@ -21,6 +21,9 @@ public class QuickSort1 {
         arr[in] = arr[high];
         arr[high] = finalTemp;
 
+
+
+
         return in;
 
     }
@@ -43,6 +46,7 @@ public class QuickSort1 {
 //        int[] arr = {3,2,5,6,1};
         int[] arr = {4,0,1,9,2,3,5,7};
         quickSort(arr, 0, arr.length - 1);
+
         for(int i: arr) System.out.println(i);
 
     }

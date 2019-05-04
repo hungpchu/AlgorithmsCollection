@@ -45,11 +45,6 @@ public class QuickSort1 {
         quickSort(arr, 0, arr.length - 1);
         for(int i: arr) System.out.println(i);
 
-
-
     }
-
-
-
 
 }

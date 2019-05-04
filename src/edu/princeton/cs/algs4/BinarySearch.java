@@ -1,5 +1,5 @@
 /******************************************************************************
- *  Compilation:  javac BinarySearch.java
+ *  Compilation:  javac BinarySearch1.java
  *  Execution:    java BinarySearch whitelist.txt < input.txt
  *  Dependencies: In.java StdIn.java StdOut.java
  *  Data files:   https://algs4.cs.princeton.edu/11model/tinyW.txt

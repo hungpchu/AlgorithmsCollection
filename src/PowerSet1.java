@@ -42,6 +42,7 @@ public class PowerSet1 {
 
         int[] subset = new int[arr.length];
 
+        // recursive call popping according to the stack
         PowerSet(arr, subset, 0);
 
     }

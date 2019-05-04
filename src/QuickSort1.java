@@ -21,9 +21,6 @@ public class QuickSort1 {
         arr[in] = arr[high];
         arr[high] = finalTemp;
 
-
-
-
         return in;
 
     }
@@ -36,9 +33,6 @@ public class QuickSort1 {
         }
 
     }
-
-
-
 
 
     public static void main(String[] args){
